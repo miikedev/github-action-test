@@ -1,0 +1,397 @@
+/* modal show chg brackground color */
+.red.mains:after {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 100;
+}
+
+/* button effect */
+.btn-containers {
+  display: flex;
+  justify-content: end;
+}
+
+/* status css */
+.status {
+  width: 150px;
+  height: 30px;
+  line-height: 19px;
+}
+
+/* navbar css */
+/* :start */
+.sidebars {
+  width: 65px;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+}
+
+.sidebars .nav {
+  margin-top: 35px;
+  transition: 2s;
+}
+
+.nav-link {
+  font-weight: bold;
+  color: #031d44;
+  text-align: center;
+  padding: 20px;
+  /* /* margin: 0px 20px; */
+  display: inline-block;
+  position: relative;
+  transition: 1s;
+  /* opacity: 0.75; */
+}
+
+.nav-link:hover {
+  opacity: 1;
+  color: black;
+  transition: 1s;
+}
+
+.nav-link::before {
+  transition: 300ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: #031d44;
+}
+
+.nav-link-ltr::before {
+  width: 0%;
+  bottom: 10px;
+}
+
+.nav-link-ltr:hover::before {
+  width: 60%;
+  /* margin-right:10px ; */
+}
+
+.router-link-active.nav-link-ltr::before {
+  width: 60%;
+}
+
+.router-link-active.sides {
+  background: #007bff;
+  color: wheat;
+  border-radius: 10%;
+  transition: 5s;
+}
+
+/* .router-link-active{
+  background: black;
+  color:wheat;
+} */
+
+.account {
+  cursor: pointer;
+}
+
+.navbar-brand {
+  width: 50px;
+  height: 50px;
+  margin-left: 60px;
+}
+
+.navbar-brand img {
+  width: inherit;
+  height: inherit;
+}
+/* :end */
+
+/* register new worker css */
+/* start */
+.nrcForm {
+  /* width: 350px; */
+  height: 38px;
+  border: 2px solid black;
+  /* margin-right: 20px; */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.nrcForm select {
+  width: 50px;
+  height: inherit;
+  border-color: #dedede;
+  /* padding: 20px 0; */
+  background-color: transparent;
+  text-align: center;
+  margin-top: -2px;
+}
+
+.nrcForm .town {
+  width: 100px;
+  /* letter-spacing: 5px; */
+}
+
+.nrcForm p {
+  width: 20px;
+  height: 38px;
+  font-size: 24px;
+  text-align: center;
+  background-color: #f8f9fa;
+  margin-top: -2px;
+}
+
+.nrcNumber {
+  width: 80px;
+  /* background-color: #f8f9fa; */
+  border: none;
+  font-size: 16px;
+  font-weight: thin;
+}
+
+.cvs label {
+  padding-bottom: 2px;
+}
+
+.cvs input {
+  background-color: #f8f9fa;
+  border: 1px solid #dedede;
+  height: 38px;
+  font-size: 15px;
+  border-radius: 8px;
+}
+
+.cvs .dates {
+  border: solid 1px #dedede;
+  -webkit-appearance: none;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 2px;
+  padding-right: 10px;
+  border-radius: 8px;
+}
+
+.btn-group label {
+  height: 38px;
+  line-height: 28px;
+}
+
+input:focus {
+  padding-left: 5px;
+  outline: 0;
+}
+
+/* end */
+
+/* CV modal css */
+/* start */
+.cvModal {
+  width: 88vw;
+  height: 88vh;
+  border-radius: 20px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  z-index: 200;
+
+  overflow: hidden;
+}
+
+.cv {
+  width: inherit;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.close {
+  background-color: transparent;
+  border: none;
+  float: right;
+  /* margin-bottom: 120px; */
+  font-size: 40px;
+
+  position: absolute;
+  top: -10px;
+  right: 10px;
+}
+
+.modalBody {
+  position: relative;
+}
+
+.personalinform {
+  width: 100%;
+  padding-left: 15px;
+  border-radius: 15px;
+  background-color: #fdfdfb;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  /* box-shadow: 2px 4px; */
+  /* box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset; */
+}
+
+.cvdetailsContainer,
+.otherInformation {
+  padding: 5px 15px;
+  border-radius: 15px;
+  background-color: #fdfdfb;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.bolds div p:first-child {
+  font-weight: bold;
+}
+
+.userPhoto {
+  width: 130px;
+  height: 130px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  /* background-color: aqua; */
+}
+
+.userPhoto img {
+  width: inherit;
+  height: inherit;
+  margin-left: -12px;
+}
+
+.margins {
+  margin-left: 150px;
+}
+
+.margin_end {
+  margin-right: 50px;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnContainer .btn {
+  margin: 0 20px;
+  padding: 5px 30px;
+}
+
+.pendbtn {
+  background: #fff;
+  color: #ffc107;
+  border: 1px solid #ffc107;
+}
+
+.reject {
+  /* background: rgba(255, 0, 0,0.2); */
+  background-color: #fff;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+.accept {
+  background-color: #fff;
+  color: #28a745;
+  border: 1px solid #28a745;
+}
+
+.pendbtn:hover {
+  background: orange;
+}
+
+.reject:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.accept:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.close {
+  /* background-color: red; */
+  position: fixed;
+  padding: 20px;
+  z-index: 10;
+}
+
+.close:active {
+  transform: scale(1.02);
+}
+/* end */
+
+/* Contarct css */
+/* start */
+.dates {
+  /* width: 300px; */
+  -webkit-appearance: none;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 2px;
+  padding-right: 10px;
+  border-radius: 8px;
+}
+/* end */
+
+.success {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(50%, 50%); */
+}
+
+/* error message */
+/* start */
+.errorMessage {
+  width: 100vw;
+  height: 100vh;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 30px 20px;
+  transition: 1s;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(121, 9, 9, 0.36458333333333337) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 100;
+}
+
+.error-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 400px;
+  width: 100%;
+  height: 400px;
+  /* transform: translate(-50%, -50%); */
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  overflow: hidden;
+  color: #415868;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  z-index: 100;
+}
+/* end */
+
+.download {
+  margin-top: 34px;
+}
